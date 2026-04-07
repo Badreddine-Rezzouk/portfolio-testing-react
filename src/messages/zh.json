@@ -1,0 +1,62 @@
+{
+  "Navigation": {
+    "home": "首页",
+    "about": "关于我",
+    "proficiencies": "技能",
+    "projects": "项目",
+    "game-mods": "游戏模组",
+    "passions": "兴趣"
+  },
+  "LanguageSwitcher": {
+    "switch": "切换语言"
+  },
+  "Home": {
+    "title": "欢迎来到我的作品集",
+    "subtitle": "发现我是谁，我做什么，以及我热衷于什么。"
+  },
+  "About": {
+    "title": "关于我",
+    "description": "我是一名热衷于构建优秀软件的开发人员。"
+  },
+  "Proficiencies": {
+    "title": "技能",
+    "list": "网页开发，游戏模组，软件工程"
+  },
+  "Projects": {
+    "title": "网络和编码项目"
+  },
+  "GameMods": {
+    "title": "我的视频游戏模组",
+    "description": "视频游戏模组是通过添加或修改内容来改变视频游戏的做法，目的是创建开发者最初不打算提供的游戏玩法。",
+    "filters": {
+      "game": "游戏",
+      "category": "分类",
+      "all_games": "所有游戏",
+      "all_categories": "所有分类",
+      "clear": "清除"
+    },
+    "status": {
+      "released": "已发布",
+      "working": "进行中"
+    },
+    "details": {
+      "game": "游戏",
+      "date": "日期",
+      "categories": "分类",
+      "downloads": "下载",
+      "direct": "直接下载",
+      "nexus": "Nexus Mods",
+      "modworkshop": "ModWorkshop",
+      "steam": "Steam Workshop",
+      "overtake": "Overtake.gg",
+      "credits": "鸣谢",
+      "howToInstall": "如何安装"
+    },
+    "notFound": "未找到模组。",
+    "backToMods": "回到所有模组",
+    "noModsFound": "没有符合您标准的模组。"
+  },
+  "Passions": {
+    "title": "我的兴趣"
+  }
+}

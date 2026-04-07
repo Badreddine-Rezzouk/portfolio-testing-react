@@ -1,0 +1,62 @@
+{
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "proficiencies": "Compétences",
+    "projects": "Projets",
+    "game-mods": "Mods de Jeux",
+    "passions": "Passions"
+  },
+  "LanguageSwitcher": {
+    "switch": "Changer de langue"
+  },
+  "Home": {
+    "title": "Bienvenue sur mon Portfolio",
+    "subtitle": "Découvrez qui je suis, ce que je fais et ce qui me passionne."
+  },
+  "About": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur passionné par la création de logiciels de qualité."
+  },
+  "Proficiencies": {
+    "title": "Compétences",
+    "list": "Développement Web, Modding de Jeux, Génie Logiciel"
+  },
+  "Projects": {
+    "title": "Projets Web & Codage"
+  },
+  "GameMods": {
+    "title": "Mes Mods de Jeux Vidéo",
+    "description": "Le modding de jeux vidéo est la pratique consistant à transformer un jeu vidéo en ajoutant ou en modifiant du contenu, dans le but de créer un gameplay qui n'était pas initialement prévu par le développeur.",
+    "filters": {
+      "game": "Jeu",
+      "category": "Catégorie",
+      "all_games": "Tous les jeux",
+      "all_categories": "Toutes les catégories",
+      "clear": "Effacer"
+    },
+    "status": {
+      "released": "Sorti",
+      "working": "En cours"
+    },
+    "details": {
+      "game": "Jeu",
+      "date": "Date",
+      "categories": "Catégories",
+      "downloads": "Téléchargements",
+      "direct": "Téléchargement Direct",
+      "nexus": "Nexus Mods",
+      "modworkshop": "ModWorkshop",
+      "steam": "Steam Workshop",
+      "overtake": "Overtake.gg",
+      "credits": "Crédits",
+      "howToInstall": "Comment installer"
+    },
+    "notFound": "Mod non trouvé.",
+    "backToMods": "Retour à tous les mods",
+    "noModsFound": "Aucun mod trouvé correspondant à vos critères."
+  },
+  "Passions": {
+    "title": "Mes Passions"
+  }
+}

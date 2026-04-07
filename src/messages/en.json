@@ -1,0 +1,62 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "proficiencies": "Proficiencies",
+    "projects": "Projects",
+    "game-mods": "Game Mods",
+    "passions": "Passions"
+  },
+  "LanguageSwitcher": {
+    "switch": "Switch language"
+  },
+  "Home": {
+    "title": "Welcome to my Portfolio",
+    "subtitle": "Discover who I am, what I do, and what I'm passionate about."
+  },
+  "About": {
+    "title": "About Me",
+    "description": "I am a developer passionate about building great software."
+  },
+  "Proficiencies": {
+    "title": "Proficiencies",
+    "list": "Web Development, Game Modding, Software Engineering"
+  },
+  "Projects": {
+    "title": "Web & Coding Projects"
+  },
+  "GameMods": {
+    "title": "My Video Game Mods",
+    "description": "Video game modding is the practice of transforming a video game by adding or modifying content, with the goal of creating gameplay not originally intended by the developer.",
+    "filters": {
+      "game": "Game",
+      "category": "Category",
+      "all_games": "All Games",
+      "all_categories": "All Categories",
+      "clear": "Clear"
+    },
+    "status": {
+      "released": "Released",
+      "working": "In progress"
+    },
+    "details": {
+      "game": "Game",
+      "date": "Date",
+      "categories": "Categories",
+      "downloads": "Downloads",
+      "direct": "Direct Download",
+      "nexus": "Nexus Mods",
+      "modworkshop": "ModWorkshop",
+      "steam": "Steam Workshop",
+      "overtake": "Overtake.gg",
+      "credits": "Credits",
+      "howToInstall": "How to install"
+    },
+    "notFound": "Mod not found.",
+    "backToMods": "Back to all mods",
+    "noModsFound": "No mods found matching your criteria."
+  },
+  "Passions": {
+    "title": "My Passions"
+  }
+}
