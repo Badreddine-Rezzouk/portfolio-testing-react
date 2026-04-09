@@ -1,16 +1,18 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/request';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import modsDataRaw from '@/data/mods.json';
-import { ModsData, Mod, Game, Category } from '@/types/mods';
+import { ModsData } from '@/types/mods';
+import { getLocalizedField } from '@/utils/i18n';
 
 const modsData = modsDataRaw as unknown as ModsData;
 
 export default function GameModsPage() {
   const t = useTranslations('GameMods');
+  const locale = useLocale();
   const [selectedGame, setSelectedGame] = useState<string>('');
   const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -24,9 +26,12 @@ export default function GameModsPage() {
         categoryMatch = mod.categories.some(catId => selectedCategories.has(catId));
       }
 
+      const localizedTitle = getLocalizedField(mod.title, locale) || '';
+      const localizedShort = getLocalizedField(mod.shortdescription, locale) || '';
+
       const searchMatch = searchTerm 
-        ? mod.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-          mod.shortdescription.toLowerCase().includes(searchTerm.toLowerCase())
+        ? localizedTitle.toLowerCase().includes(searchTerm.toLowerCase()) || 
+          localizedShort.toLowerCase().includes(searchTerm.toLowerCase())
         : true;
 
       return gameMatch && categoryMatch && searchMatch;
@@ -47,6 +52,16 @@ export default function GameModsPage() {
 
   const getGameName = (gameId: string) => {
     return modsData.games.find(g => g.id === gameId)?.name || gameId;
+  };
+
+  const getTitle = (modId: string) => {
+    const mod = modsData.mods.find(m => m.id === modId);
+    return mod ? (getLocalizedField(mod.title, locale) || modId) : modId;
+  };
+
+  const getShort = (modId: string) => {
+    const mod = modsData.mods.find(m => m.id === modId);
+    return mod ? (getLocalizedField(mod.shortdescription, locale) || '') : '';
   };
 
   return (
@@ -129,14 +144,14 @@ export default function GameModsPage() {
                   <div className="relative w-full md:w-1/2 aspect-video">
                     <Image 
                       src={`/Images/mod/${mod.id}/${mod.images[0]}`}
-                      alt={mod.title}
+                      alt={getTitle(mod.id)}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="p-6 md:w-1/2 space-y-2 text-zinc-900 dark:text-zinc-50">
                     <div className="flex justify-between items-start">
-                      <h2 className="text-xl font-bold">{mod.title}</h2>
+                      <h2 className="text-xl font-bold">{getTitle(mod.id)}</h2>
                       <span className={`px-2 py-1 text-xs font-bold rounded-full ${
                         mod.status === 'released' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100'
                       }`}>
@@ -145,7 +160,7 @@ export default function GameModsPage() {
                     </div>
                     <p className="text-sm font-semibold text-zinc-500 dark:text-zinc-400">{getGameName(mod.game)} | {mod.date}</p>
                     <p className="text-zinc-600 dark:text-zinc-300 line-clamp-3">
-                      {mod.shortdescription}
+                      {getShort(mod.id)}
                     </p>
                   </div>
                 </div>

@@ -3,16 +3,18 @@
 import { useParams } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { Link } from '@/i18n/request';
+import { Link } from '@/i18n/routing';
 import { useState } from 'react';
 import modsDataRaw from '@/data/mods.json';
-import { ModsData, Mod, Game, Category } from '@/types/mods';
+import { ModsData } from '@/types/mods';
+import { getLocalizedField } from '@/utils/i18n';
 
 const modsData = modsDataRaw as unknown as ModsData;
 
 export default function ModDetailPage() {
   const params = useParams();
   const modId = params.modId as string;
+  const locale = useLocale();
   const t = useTranslations('GameMods');
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -34,11 +36,16 @@ export default function ModDetailPage() {
     return modsData.categories.find(c => c.id === cid)?.name || cid;
   }).join(', ');
 
+  const title = getLocalizedField(mod.title, locale);
+  const description = getLocalizedField(mod.description, locale);
+  const credits = getLocalizedField(mod.credits, locale);
+  const guide = getLocalizedField(game?.guide, locale);
+
   return (
     <div className="max-w-6xl mx-auto p-4 sm:p-8 space-y-8">
       <section className="text-center">
         <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 border-4 border-zinc-900 dark:border-zinc-50 p-4 inline-block rounded-lg shadow-xl bg-white dark:bg-zinc-900">
-          {mod.title}
+          {title}
         </h1>
       </section>
 
@@ -93,10 +100,10 @@ export default function ModDetailPage() {
               </div>
             </div>
 
-            {game?.guide && (
+            {guide && (
               <details className="border rounded-lg p-4 bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800">
                 <summary className="font-bold cursor-pointer">{t('details.howToInstall') || 'How to install'}</summary>
-                <div className="mt-2 text-sm space-y-2 prose dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400" dangerouslySetInnerHTML={{ __html: game.guide }} />
+                <div className="mt-2 text-sm space-y-2 prose dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400" dangerouslySetInnerHTML={{ __html: guide }} />
               </details>
             )}
           </div>
@@ -105,7 +112,7 @@ export default function ModDetailPage() {
             <div className="relative aspect-video border-4 border-zinc-900 dark:border-zinc-50 rounded overflow-hidden shadow-md">
               <Image 
                 src={`/Images/mod/${mod.id}/${mod.images[activeImageIndex]}`}
-                alt={`${mod.title} screenshot ${activeImageIndex + 1}`}
+                alt={`${title} screenshot ${activeImageIndex + 1}`}
                 fill
                 className="object-cover cursor-pointer"
                 onClick={() => window.open(`/Images/mod/${mod.id}/${mod.images[activeImageIndex]}`, '_blank')}
@@ -123,7 +130,7 @@ export default function ModDetailPage() {
                   >
                     <Image 
                       src={`/Images/mod/${mod.id}/${img}`}
-                      alt={`${mod.title} thumb ${idx + 1}`}
+                      alt={`${title} thumb ${idx + 1}`}
                       fill
                       className="object-cover"
                     />
@@ -135,12 +142,12 @@ export default function ModDetailPage() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-zinc-200 dark:border-zinc-800 space-y-4">
-          <div className="prose dark:prose-invert max-w-none text-zinc-700 dark:text-zinc-300" dangerouslySetInnerHTML={{ __html: mod.description }} />
+          <div className="prose dark:prose-invert max-w-none text-zinc-700 dark:text-zinc-300" dangerouslySetInnerHTML={{ __html: description || '' }} />
           
-          {mod.credits && (
+          {credits && (
             <details className="border rounded-lg p-4 bg-zinc-50 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800">
               <summary className="font-bold cursor-pointer">{t('details.credits')}</summary>
-              <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: mod.credits }} />
+              <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: credits }} />
             </details>
           )}
         </div>

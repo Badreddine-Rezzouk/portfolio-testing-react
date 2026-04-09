@@ -6,7 +6,7 @@ export interface Category {
 export interface Game {
   id: string;
   name: string;
-  guide?: string;
+  guide?: string | Record<string, string>;
 }
 
 export interface Download {
@@ -19,15 +19,15 @@ export interface Download {
 
 export interface Mod {
   id: string;
-  title: string;
+  title: string | Record<string, string>;
   game: string;
   categories: string[];
   date: string;
   status: 'released' | 'working';
   images: string[];
-  shortdescription: string;
-  description: string;
-  credits?: string;
+  shortdescription: string | Record<string, string>;
+  description: string | Record<string, string>;
+  credits?: string | Record<string, string>;
   download?: Download;
 }
 

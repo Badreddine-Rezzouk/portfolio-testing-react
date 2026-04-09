@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "Portfolio",
+    "description": "Personal portfolio and game mods"
+  },
   "Navigation": {
     "home": "Home",
     "about": "About",

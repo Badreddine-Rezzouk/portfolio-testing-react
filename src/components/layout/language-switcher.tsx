@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { usePathname, useRouter, locales, localeNames } from '@/i18n/request';
+import { usePathname, useRouter, locales, localeNames } from '@/i18n/routing';
 import { Languages, ChevronDown } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 

@@ -1,5 +1,19 @@
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/request';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Navigation' });
+
+  return {
+    title: t('home'),
+  };
+}
 
 export default function Home() {
   const t = useTranslations('Home');

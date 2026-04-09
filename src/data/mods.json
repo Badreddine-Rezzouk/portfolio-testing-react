@@ -65,15 +65,31 @@
         "sinder-pd3_phone_2.png",
         "sinder-pd3_phone_3.png"
       ],
-      "shortdescription": "This mod uses Hioyami’s succubus fanart as the phone wallpaper.",
+      "shortdescription": {
+        "en": "This mod uses Hioyami’s succubus fanart as the phone wallpaper.",
+        "fr": "Ce mod utilise le fanart succube de Hioyami comme fond d'écran de téléphone.",
+        "zh": "此模组使用 Hioyami 的魅魔扇子艺术作为手机壁纸。"
+      },
       "status": "released",
-      "title": "Phone Wallpaper - Sinder Succubus"
+      "title": {
+        "en": "Phone Wallpaper - Sinder Succubus",
+        "fr": "Fond d'écran téléphone - Sinder Succube",
+        "zh": "手机壁纸 - Sinder 魅魔"
+      }
     },
     {
       "categories": ["sinder"],
-      "credits": "JN Studio, Reimund, RawshawDark, Lilyon, ClickDraws, Woudpe, Ringeko, Tofuubear, ziiilu_ewe, Asinglepetal, Shiny, Nanoless, Zorkxa, cheriyfu, itsmsbunny, Bang nyfe, Sinder, froske, Kuroi Yoko, Kasimi, Shadow263, Bebatch, Chima, itsBearVT, Lynniia, meowmaffura, heikevbo and solevis_on- for the arts used.",
+      "credits": {
+        "en": "JN Studio, Reimund, RawshawDark, Lilyon, ClickDraws, Woudpe, Ringeko, Tofuubear, ziiilu_ewe, Asinglepetal, Shiny, Nanoless, Zorkxa, cheriyfu, itsmsbunny, Bang nyfe, Sinder, froske, Kuroi Yoko, Kasimi, Shadow263, Bebatch, Chima, itsBearVT, Lynniia, meowmaffura, heikevbo and solevis_on- for the arts used.",
+        "fr": "JN Studio, Reimund, RawshawDark, Lilyon, ClickDraws, Woudpe, Ringeko, Tofuubear, ziiilu_ewe, Asinglepetal, Shiny, Nanoless, Zorkxa, cheriyfu, itsmsbunny, Bang nyfe, Sinder, froske, Kuroi Yoko, Kasimi, Shadow263, Bebatch, Chima, itsBearVT, Lynniia, meowmaffura, heikevbo et solevis_on- pour les illustrations utilisées.",
+        "zh": "JN Studio, Reimund, RawshawDark, Lilyon, ClickDraws, Woudpe, Ringeko, Tofuubear, ziiilu_ewe, Asinglepetal, Shiny, Nanoless, Zorkxa, cheriyfu, itsmsbunny, Bang nyfe, Sinder, froske, Kuroi Yoko, Kasimi, Shadow263, Bebatch, Chima, itsBearVT, Lynniia, meowmaffura, heikevbo 和 solevis_on- 感谢所使用的艺术作品。"
+      },
       "date": "10/04/2025",
-      "description": "This mod replaces the paintings found in the mission <a href=\"https://payday.fandom.com/wiki/Under_The_Surphaze\">\"Under the Surphaze\"</a> with various Sinder fanarts.\n",
+      "description": {
+        "en": "This mod replaces the paintings found in the mission <a href=\"https://payday.fandom.com/wiki/Under_The_Surphaze\">\"Under the Surphaze\"</a> with various Sinder fanarts.\n",
+        "fr": "Ce mod remplace les tableaux de la mission <a href=\"https://payday.fandom.com/wiki/Under_The_Surphaze\">\"Under the Surphaze\"</a> par divers fanarts de Sinder.\n",
+        "zh": "此模组将任务 <a href=\"https://payday.fandom.com/wiki/Under_The_Surphaze\">“Under the Surphaze”</a> 中的绘画替换为各种 Sinder 扇子艺术。\n"
+      },
       "download": {
         "direct": "SinderArtGallery_P.pak"
       },
@@ -100,9 +116,17 @@
         "sinder-pd3_art-gallery_18.png",
         "sinder-pd3_art-gallery_19.png"
       ],
-      "shortdescription": "This mod replaces the paintings found in the mission \"Under the Surphaze\" with various Sinder fanarts.\n",
+      "shortdescription": {
+        "en": "This mod replaces the paintings found in the mission \"Under the Surphaze\" with various Sinder fanarts.\n",
+        "fr": "Ce mod remplace les tableaux de la mission \"Under the Surphaze\" par divers fanarts de Sinder.\n",
+        "zh": "此模组将任务“Under the Surphaze”中的绘画替换为各种 Sinder 扇子艺术。\n"
+      },
       "status": "released",
-      "title": "Art Gallery (mission \"Under the Surphaze\") - Sinder"
+      "title": {
+        "en": "Art Gallery (mission \"Under the Surphaze\") - Sinder",
+        "fr": "Galerie d'art (mission \"Under the Surphaze\") - Sinder",
+        "zh": "艺术画廊（任务 “Under the Surphaze”） - Sinder"
+      }
     },
     {
       "categories": ["sinder"],
