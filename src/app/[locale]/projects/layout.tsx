@@ -7,19 +7,19 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Navigation' });
-  const tMods = await getTranslations({ locale, namespace: 'GameMods' });
+  const tProjects = await getTranslations({ locale, namespace: 'Projects' });
 
   return {
-    title: t('game-mods'),
-    description: tMods('description'),
+    title: t('projects'),
+    description: tProjects('description'),
     openGraph: {
-      title: t('game-mods'),
-      description: tMods('description'),
+      title: t('projects'),
+      description: tProjects('description'),
     },
   };
 }
 
-export default function GameModsLayout({
+export default function ProjectsLayout({
   children,
 }: {
   children: React.ReactNode;

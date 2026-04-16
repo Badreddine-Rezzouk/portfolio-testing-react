@@ -1,7 +1,16 @@
 {
   "Metadata": {
     "title": "作品集",
-    "description": "个人作品集和游戏模组"
+    "description": "个人作品集和游戏模组",
+    "author": "Badreddine Rezzouk",
+    "og": {
+      "type": "website",
+      "siteName": "Badreddine 的作品集"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "creator": "@B_Rezzouk"
+    }
   },
   "Navigation": {
     "home": "首页",
@@ -16,7 +25,21 @@
   },
   "Home": {
     "title": "欢迎来到我的作品集",
-    "subtitle": "发现我是谁，我做什么，以及我热衷于什么。"
+    "subtitle": "发现我是谁，我做什么，以及我热衷于什么。",
+    "quotes": {
+      "bainville": {
+        "text": "\"乐观主义是革命的信仰\"",
+        "author": "雅克·班维尔"
+      },
+      "einstein": {
+        "text": "\"别再让我说任何话了\"",
+        "author": "阿尔伯特·爱因斯坦"
+      }
+    },
+    "welcome": "欢迎来到我的作品集",
+    "presentation_text": "你好，我叫 Badreddine，是一名目前就读于巴黎西岱大学 - 里夫塞纳校区的法国学生。欢迎来到我的个人作品集！",
+    "about_me": "关于我",
+    "presentation_me": "我 2005 年出生于法兰西岛，在一个相当朴素的家庭中长大。"
   },
   "About": {
     "title": "关于我",
@@ -27,7 +50,22 @@
     "list": "网页开发，游戏模组，软件工程"
   },
   "Projects": {
-    "title": "网络和编码项目"
+    "title": "网页与编码项目",
+    "description": "我的网页和编码项目集，包括学校项目和个人实验。",
+    "filters": {
+      "category": "类别",
+      "all_categories": "所有类别",
+      "clear": "清除"
+    },
+    "details": {
+      "date": "日期",
+      "categories": "类别",
+      "link": "在线演示",
+      "github": "GitHub 仓库"
+    },
+    "notFound": "未找到项目。",
+    "backToProjects": "返回所有项目",
+    "noProjectsFound": "没有找到符合您标准的项目。"
   },
   "GameMods": {
     "title": "我的视频游戏模组",
@@ -62,5 +100,14 @@
   },
   "Passions": {
     "title": "我的兴趣"
+  },
+  "Footer": {
+    "links": {
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "email": "电子邮件"
+    },
+    "license": "Badreddine Rezzouk. 除非另有说明，我制作和发布的所有内容均受 GNU 通用公共许可证 v3.0 的约束。"
   }
 }

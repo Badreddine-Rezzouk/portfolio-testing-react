@@ -1,0 +1,80 @@
+{
+  "categories": [
+    {
+      "id": "school_project",
+      "name": {
+        "en": "School Project",
+        "fr": "Projet scolaire",
+        "zh": "学校项目"
+      }
+    },
+    {
+      "id": "personal_project",
+      "name": {
+        "en": "Personal Project",
+        "fr": "Projet personnel",
+        "zh": "个人项目"
+      }
+    },
+    {
+      "id": "web_development",
+      "name": {
+        "en": "Web Development",
+        "fr": "Développement web",
+        "zh": "网页开发"
+      }
+    },
+    {
+      "id": "android_development",
+      "name": {
+        "en": "Android Development",
+        "fr": "Développement Android",
+        "zh": "安卓开发"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "website-redesign-for-a-charitable-association",
+      "title": {
+        "en": "Simulated situation - Website redesign for a charitable association",
+        "fr": "Scénario fictif - Refonte du site web d'une association caritative",
+        "zh": "情景模拟 - 为慈善机构重新设计网站"
+      },
+      "shortdescription": {
+        "en": "A comprehensive redesign of the website to enhance user experience.",
+        "fr": "Une refonte complète du site web pour améliorer l'expérience utilisateur.",
+        "zh": "对网站进行全面重新设计，以提高用户体验。"
+      },
+      "description": {
+        "en": "A comprehensive redesign of the website to enhance user experience and increase engagement with the charitable cause.",
+        "fr": "Une refonte complète du site web pour améliorer l'expérience utilisateur et augmenter l'engagement avec la cause caritative.",
+        "zh": "对网站进行全面重新设计，以提高用户体验并增加与慈善事业的参与度。"
+      },
+      "categories": ["school_project", "web_development"],
+      "date": "2023",
+      "images": ["main.png"]
+    },
+    {
+      "id": "power-consumption-management-android-app",
+      "title": {
+        "en": "Power consumption management android app",
+        "fr": "Application android de gestion de consommation énergetique",
+        "zh": "Android应用 - 能耗管理"
+      },
+      "shortdescription": {
+        "en": "An Android application designed to help users monitor and manage their power consumption.",
+        "fr": "Une application Android conçue pour aider les utilisateurs à surveiller et à gérer leur consommation d'énergie.",
+        "zh": "一款Android应用，旨在帮助用户监控和管理其能源消耗。"
+      },
+      "description": {
+        "en": "An Android application designed to help users monitor and manage their power consumption, promoting energy efficiency and sustainability.",
+        "fr": "Une application Android conçue pour aider les utilisateurs à surveiller et à gérer leur consommation d'énergie, promouvant l'efficacité énergétique et la durabilité.",
+        "zh": "一款Android应用，旨在帮助用户监控和管理其能源消耗，促进能源效率和可持续性。"
+      },
+      "categories": ["school_project", "android_development"],
+      "date": "2022",
+      "images": ["main.png"]
+    }
+  ]
+}

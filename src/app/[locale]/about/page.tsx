@@ -8,9 +8,15 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Navigation' });
+  const tAbout = await getTranslations({ locale, namespace: 'About' });
 
   return {
     title: t('about'),
+    description: tAbout('description'),
+    openGraph: {
+      title: t('about'),
+      description: tAbout('description'),
+    },
   };
 }
 

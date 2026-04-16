@@ -1,7 +1,16 @@
 {
   "Metadata": {
     "title": "Portfolio",
-    "description": "Portfolio personnel et mods de jeux"
+    "description": "Portfolio personnel et mods de jeux",
+    "author": "Badreddine Rezzouk",
+    "og": {
+      "type": "website",
+      "siteName": "Portfolio de Badreddine"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "creator": "@B_Rezzouk"
+    }
   },
   "Navigation": {
     "home": "Accueil",
@@ -16,7 +25,21 @@
   },
   "Home": {
     "title": "Bienvenue sur mon Portfolio",
-    "subtitle": "Découvrez qui je suis, ce que je fais et ce qui me passionne."
+    "subtitle": "Découvrez qui je suis, ce que je fais et ce qui me passionne.",
+    "quotes": {
+      "bainville": {
+        "text": "\"L'optimisme est la foi des révolutions\"",
+        "author": "Jacques Bainville"
+      },
+      "einstein": {
+        "text": "\"Hör auf, mich irgendetwas sagen zu lassen\"",
+        "author": "Albert Einstein"
+      }
+    },
+    "welcome": "Bienvenue sur mon portfolio",
+    "presentation_text": "Bonjour, je m'appelle Badreddine et je suis un étudiant d'origine française actuellement à l'université Paris Cité - Rives de Seine. Bienvenue sur ce désordre qu'est mon portfolio!",
+    "about_me": "À propos de moi",
+    "presentation_me": "Né en Ile-de-France en 2005, j'ai grandi dans une famille assez modeste."
   },
   "About": {
     "title": "À propos de moi",
@@ -27,7 +50,22 @@
     "list": "Développement Web, Modding de Jeux, Génie Logiciel"
   },
   "Projects": {
-    "title": "Projets Web & Codage"
+    "title": "Projets Web & Codage",
+    "description": "Une collection de mes projets web et de codage, y compris des projets scolaires et des expériences personnelles.",
+    "filters": {
+      "category": "Catégorie",
+      "all_categories": "Toutes les catégories",
+      "clear": "Effacer"
+    },
+    "details": {
+      "date": "Date",
+      "categories": "Catégories",
+      "link": "Démo en direct",
+      "github": "Dépôt GitHub"
+    },
+    "notFound": "Projet non trouvé.",
+    "backToProjects": "Retour à tous les projets",
+    "noProjectsFound": "Aucun projet trouvé correspondant à vos critères."
   },
   "GameMods": {
     "title": "Mes Mods de Jeux Vidéo",
@@ -62,5 +100,14 @@
   },
   "Passions": {
     "title": "Mes Passions"
+  },
+  "Footer": {
+    "license": "Badreddine Rezzouk. Tout le contenu produit et publié par moi, sauf indication contraire, relève de la licence publique générale GNU v3.0.",
+    "links": {
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
   }
 }

@@ -1,28 +1,28 @@
 import { getTranslations } from 'next-intl/server';
-import modsDataRaw from '@/data/mods.json';
-import { ModsData } from '@/types/mods';
+import projectsDataRaw from '@/data/projects.json';
+import { ProjectsData } from '@/types/projects';
 import { getLocalizedField } from '@/utils/i18n';
 
-const modsData = modsDataRaw as unknown as ModsData;
+const projectsData = projectsDataRaw as unknown as ProjectsData;
 
 export async function generateMetadata({
   params
 }: {
-  params: Promise<{ locale: string; modId: string }>;
+  params: Promise<{ locale: string; projectId: string }>;
 }) {
-  const { locale, modId } = await params;
-  const mod = modsData.mods.find(m => m.id === modId);
+  const { locale, projectId } = await params;
+  const project = projectsData.projects.find(p => p.id === projectId);
 
-  if (!mod) {
-    const t = await getTranslations('GameMods');
+  if (!project) {
+    const t = await getTranslations({ locale, namespace: 'Projects' });
     return {
       title: t('notFound'),
     };
   }
 
-  const title = getLocalizedField(mod.title, locale);
-  const description = getLocalizedField(mod.shortdescription, locale);
-  const mainImage = mod.images && mod.images.length > 0 ? `/images/mods/${mod.images[0]}` : null;
+  const title = getLocalizedField(project.title, locale);
+  const description = getLocalizedField(project.shortdescription || project.description, locale);
+  const mainImage = project.images && project.images.length > 0 ? `/Images/projects/${project.id}/${project.images[0]}` : null;
 
   return {
     title: title,
@@ -51,7 +51,7 @@ export async function generateMetadata({
   };
 }
 
-export default function ModDetailLayout({
+export default function ProjectDetailLayout({
   children,
 }: {
   children: React.ReactNode;

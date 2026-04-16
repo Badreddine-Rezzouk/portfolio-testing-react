@@ -4,6 +4,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #005BA9;
+  --secondary-blue: #0078C1;
+  --middle-color: #9B4F96;
+  --primary-pink: #FF0F73;
+  --secondary-pink: #FD48C7;
+  --gradient: linear-gradient(0.25turn,var(--primary-blue), var(--secondary-blue), var(--middle-color) , var(--secondary-pink), var(--primary-pink));
 }
 
 .dark {
@@ -11,11 +17,34 @@
   --foreground: #ededed;
 }
 
+@layer theme {
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+}
+.presentation-gradient {
+  background: var(--gradient) !important;
+}
+
+.dark .presentation-gradient {
+  background: var(--gradient) !important;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
 
 body {
