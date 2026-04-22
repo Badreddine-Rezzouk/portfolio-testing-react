@@ -39,7 +39,6 @@ export default function ProjectDetailPage() {
   const title = getLocalizedField(project.title, locale);
   const description = getLocalizedField(project.description, locale);
 
-  // @ts-expect-error - description is dangerouslySetInnerHTML string
   return (
     <div className="max-w-6xl mx-auto p-4 sm:p-8 space-y-8">
       <section className="text-center">
