@@ -1,10 +1,13 @@
 {
-  "name": "untitled",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portfolio-testing-react",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A personal portfolio built with Next.js, Tailwind CSS, and next-intl for multilingual support.",
+  "author": "rrat",
+  "license": "GPL-3.0-only",
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=4096' next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },

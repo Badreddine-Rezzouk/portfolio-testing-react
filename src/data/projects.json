@@ -35,7 +35,7 @@
   ],
   "projects": [
     {
-      "id": "website-redesign-for-a-charitable-association",
+      "id": "website-redesign-charity",
       "title": {
         "en": "Simulated situation - Website redesign for a charitable association",
         "fr": "Scénario fictif - Refonte du site web d'une association caritative",
@@ -53,10 +53,10 @@
       },
       "categories": ["school_project", "web_development"],
       "date": "2023",
-      "images": ["main.png"]
+      "images": ["main.png", "image-1.png", "image-2.png"]
     },
     {
-      "id": "power-consumption-management-android-app",
+      "id": "power-management-app",
       "title": {
         "en": "Power consumption management android app",
         "fr": "Application android de gestion de consommation énergetique",

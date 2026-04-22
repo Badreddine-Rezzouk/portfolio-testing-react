@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Testing React
 
-## Getting Started
+A modern, responsive personal portfolio website built with **Next.js**, **Tailwind CSS**, and **next-intl**.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Multilingual Support**: Fully localized using `next-intl` (i18n).
+-   **Project Showcase**: Dynamic project list with category filtering and search functionality.
+-   **Project Details**: Detailed project pages with image galleries and full-screen modals.
+-   **Responsive Design**: Mobile-first approach using Tailwind CSS.
+-   **Dark Mode**: Built-in dark mode support via `next-themes`.
+-   **Sections**: Home, About, Projects, Game Mods, Passions, and Proficiencies.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+-   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+-   **Internationalization**: [next-intl](https://next-intl-docs.vercel.app/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+-   Node.js 18.x or later
+-   npm, yarn, pnpm, or bun
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/portfolio-testing-react.git
+    cd portfolio-testing-react
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Run the development server:
+    ```bash
+    npm run dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   `src/app/[locale]`: Contains the localized pages and layouts.
+-   `src/data`: JSON files containing project and content data.
+-   `src/components`: Reusable UI components.
+-   `src/i18n`: Internationalization configuration.
+-   `public`: Static assets (images, favicon).
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.

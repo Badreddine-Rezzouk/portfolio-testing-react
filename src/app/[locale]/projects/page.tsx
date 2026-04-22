@@ -123,7 +123,7 @@ export default function ProjectsPage() {
                         src={`/Images/projects/${project.id}/${project.images[0]}`}
                         alt={getTitle(project.id)}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     ) : (
                       <div className="flex items-center justify-center h-full">

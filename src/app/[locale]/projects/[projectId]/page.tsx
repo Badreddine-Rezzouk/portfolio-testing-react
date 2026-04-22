@@ -17,6 +17,7 @@ export default function ProjectDetailPage() {
   const locale = useLocale();
   const t = useTranslations('Projects');
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const project = projectsData.projects.find(p => p.id === projectId);
 
@@ -38,6 +39,7 @@ export default function ProjectDetailPage() {
   const title = getLocalizedField(project.title, locale);
   const description = getLocalizedField(project.description, locale);
 
+  // @ts-expect-error - description is dangerouslySetInnerHTML string
   return (
     <div className="max-w-6xl mx-auto p-4 sm:p-8 space-y-8">
       <section className="text-center">
@@ -78,10 +80,31 @@ export default function ProjectDetailPage() {
                     src={`/Images/projects/${project.id}/${project.images[activeImageIndex]}`}
                     alt={`${title} screenshot ${activeImageIndex + 1}`}
                     fill
-                    className="object-cover cursor-pointer"
-                    onClick={() => window.open(`/Images/projects/${project.id}/${project.images[activeImageIndex]}`, '_blank')}
+                    className="object-contain cursor-pointer"
+                    onClick={() => setIsModalOpen(true)}
                   />
                 </div>
+                {isModalOpen && (
+                  <div 
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
+                    onClick={() => setIsModalOpen(false)}
+                  >
+                    <div className="relative w-full h-full max-w-5xl max-h-[90vh]">
+                      <Image 
+                        src={`/Images/projects/${project.id}/${project.images[activeImageIndex]}`}
+                        alt={`${title} enlarged`}
+                        fill
+                        className="object-contain"
+                      />
+                      <button
+                        className="absolute top-0 right-0 m-4 text-white text-3xl font-bold bg-zinc-900 bg-opacity-50 w-12 h-12 rounded-full hover:bg-opacity-75 transition"
+                        onClick={() => setIsModalOpen(false)}
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </div>
+                )}
                 {project.images.length > 1 && (
                   <div className="flex gap-2 overflow-x-auto pb-2">
                     {project.images.map((img, idx) => (
@@ -96,7 +119,7 @@ export default function ProjectDetailPage() {
                           src={`/Images/projects/${project.id}/${img}`}
                           alt={`${title} thumb ${idx + 1}`}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </button>
                     ))}
