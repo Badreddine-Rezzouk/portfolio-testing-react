@@ -18,7 +18,8 @@
     "proficiencies": "技能",
     "projects": "项目",
     "game-mods": "游戏模组",
-    "passions": "兴趣"
+    "passions": "兴趣",
+    "tools": "工具"
   },
   "LanguageSwitcher": {
     "switch": "切换语言"
@@ -100,6 +101,36 @@
   },
   "Passions": {
     "title": "我的兴趣"
+  },
+  "Tools": {
+    "GachaCalc": {
+      "title": "明日方舟：终末地 — 抽卡模拟器",
+      "description": "计算在明日方舟：终末地中获得特定干员的概率",
+      "oro": "至纯源石",
+      "ori": "源石结晶",
+      "permits": "招募许可",
+      "currentPity": "当前 6★ 抽数",
+      "sparkGuarantee": "120抽保底机制",
+      "available": "可用",
+      "used": "已使用",
+      "owned": "已持有副本",
+      "ownedOptions": {
+        "0": "0 (未持有)",
+        "1": "1 (已解锁 P0)",
+        "2": "2 (已解锁 P1)",
+        "3": "3 (已解锁 P2)",
+        "4": "4 (已解锁 P3)",
+        "5": "5 (已解锁 P4)"
+      },
+      "totalPulls": "总抽数",
+      "ofSpark": "保底进度",
+      "calculate": "计算概率 (50,000 次模拟)",
+      "simulating": "计算中…",
+      "copy": "副本",
+      "copies": "副本",
+      "alreadyUnlocked": "已解锁",
+      "needMore": "还需 {count} 个"
+    }
   },
   "Footer": {
     "links": {

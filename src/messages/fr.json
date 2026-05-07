@@ -18,7 +18,8 @@
     "proficiencies": "Compétences",
     "projects": "Projets",
     "game-mods": "Mods de Jeux",
-    "passions": "Passions"
+    "passions": "Passions",
+    "tools": "Outils"
   },
   "LanguageSwitcher": {
     "switch": "Changer de langue"
@@ -100,6 +101,36 @@
   },
   "Passions": {
     "title": "Mes Passions"
+  },
+  "Tools": {
+    "GachaCalc": {
+      "title": "Arknights Endfield — Calculateur de Gacha",
+      "description": "Un outil de simulation pour calculer vos chances d'obtenir les opérateurs souhaités dans Arknights: Endfield",
+      "oro": "Oroberyl",
+      "ori": "Origéométrie",
+      "permits": "Permis affrétés",
+      "currentPity": "Pity 6★ actuelle",
+      "sparkGuarantee": "Garantie spark 120 pulls",
+      "available": "Disponible",
+      "used": "Déjà utilisé",
+      "owned": "Copies déjà possédées",
+      "ownedOptions": {
+        "0": "0 (ne les a pas)",
+        "1": "1 (P0 débloqué)",
+        "2": "2 (P1 débloqué)",
+        "3": "3 (P2 débloqué)",
+        "4": "4 (P3 débloqué)",
+        "5": "5 (P4 débloqué)"
+      },
+      "totalPulls": "Total des tirages",
+      "ofSpark": "d'un spark",
+      "calculate": "Calculer les probabilités (50 000 simulations)",
+      "simulating": "Simulation…",
+      "copy": "copie",
+      "copies": "copies",
+      "alreadyUnlocked": "déjà débloqué",
+      "needMore": "encore {count} besoin"
+    }
   },
   "Footer": {
     "license": "Badreddine Rezzouk. Tout le contenu produit et publié par moi, sauf indication contraire, relève de la licence publique générale GNU v3.0.",

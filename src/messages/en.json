@@ -18,7 +18,8 @@
     "proficiencies": "Proficiencies",
     "projects": "Projects",
     "game-mods": "Game Mods",
-    "passions": "Passions"
+    "passions": "Passions",
+    "tools": "Tools"
   },
   "LanguageSwitcher": {
     "switch": "Switch language"
@@ -100,6 +101,36 @@
   },
   "Passions": {
     "title": "My Passions"
+  },
+  "Tools": {
+    "GachaCalc": {
+      "title": "Arknights Endfield — Gacha Calculator",
+      "description": "A simple tool to calculate the odds of obtaining a specific item in the Arknights Endfield gacha.",
+      "oro": "Oroberyl",
+      "ori": "Origeometry",
+      "permits": "Chartered permits",
+      "currentPity": "Current 6★ pity",
+      "sparkGuarantee": "120-pull spark guarantee",
+      "available": "Available",
+      "used": "Already used",
+      "owned": "Copies already owned",
+      "ownedOptions": {
+        "0": "0 (don't have them)",
+        "1": "1 (P0 unlocked)",
+        "2": "2 (P1 unlocked)",
+        "3": "3 (P2 unlocked)",
+        "4": "4 (P3 unlocked)",
+        "5": "5 (P4 unlocked)"
+      },
+      "totalPulls": "Total pulls",
+      "ofSpark": "of a spark",
+      "calculate": "Calculate odds (50,000 simulations)",
+      "simulating": "Simulating…",
+      "copy": "copy",
+      "copies": "copies",
+      "alreadyUnlocked": "already unlocked",
+      "needMore": "need {count} more"
+    }
   },
   "Footer": {
     "license": "Badreddine Rezzouk. All content produced and published by me, unless otherwise specified, falls under the GNU General Public License v3.0.",

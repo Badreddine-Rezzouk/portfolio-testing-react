@@ -20,6 +20,13 @@ export function Navbar() {
     { name: t('projects'), href: '/projects' },
     { name: t('game-mods'), href: '/game-mods' },
     { name: t('passions'), href: '/passions' },
+    { 
+      name: t('tools'), 
+      href: '/tools',
+      dropdown: [
+        { name: 'Endfield Calculator', href: '/tools/endfield-calc' }
+      ]
+    },
   ];
 
   const isActive = (href: string) => {
@@ -70,17 +77,32 @@ export function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-zinc-900 dark:hover:text-zinc-50 ${
-                isActive(item.href)
-                  ? 'text-zinc-900 dark:text-zinc-50'
-                  : 'text-zinc-500 dark:text-zinc-400'
-              }`}
-            >
-              {item.name}
-            </Link>
+            <div key={item.href} className="relative group">
+              <Link
+                href={item.href}
+                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-zinc-900 dark:hover:text-zinc-50 ${
+                  isActive(item.href)
+                    ? 'text-zinc-900 dark:text-zinc-50'
+                    : 'text-zinc-500 dark:text-zinc-400'
+                }`}
+              >
+                {item.name}
+              </Link>
+              
+              {item.dropdown && (
+                <div className="absolute left-0 top-full mt-2 w-48 rounded-md border border-zinc-200 bg-white p-2 shadow-lg dark:border-zinc-800 dark:bg-zinc-950 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {item.dropdown.map((subItem) => (
+                    <Link
+                      key={subItem.href}
+                      href={subItem.href}
+                      className="block rounded-md px-3 py-2 text-sm text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 transition-colors"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
@@ -118,17 +140,31 @@ export function Navbar() {
           
           <nav className="flex flex-col gap-1 p-4">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`flex h-12 items-center rounded-md px-4 text-base font-medium transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 ${
-                  isActive(item.href)
-                    ? 'bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50'
-                    : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50'
-                }`}
-              >
-                {item.name}
-              </Link>
+              <div key={item.href} className="flex flex-col">
+                <Link
+                  href={item.href}
+                  className={`flex h-12 items-center rounded-md px-4 text-base font-medium transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 ${
+                    isActive(item.href)
+                      ? 'bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50'
+                      : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+                {item.dropdown && (
+                  <div className="ml-4 flex flex-col border-l border-zinc-100 dark:border-zinc-800 pl-4">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.href}
+                        href={subItem.href}
+                        className="flex h-10 items-center text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
