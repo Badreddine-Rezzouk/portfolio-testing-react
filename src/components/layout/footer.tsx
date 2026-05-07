@@ -31,7 +31,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="w-full py-12 px-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 transition-colors duration-300 mt-auto">
+    <footer className="snap-end w-full py-12 px-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 transition-colors duration-300 mt-auto">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-8 px-6">
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
           {socialLinks.map((link) => (
